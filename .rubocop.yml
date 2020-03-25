@@ -1,0 +1,37 @@
+require: 
+  - rubocop-rake
+  - rubocop-sorbet
+
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+
+# Require a sorbet sigil and for it to be at least 'strong'.
+# Autocorrect doesn't play nice if more than one of these is 
+# active.
+Sorbet/HasSigil:
+  Enabled: false
+Sorbet/IgnoreSigil:
+  Enabled: false
+Sorbet/FalseSigil:
+  Enabled: false
+Sorbet/TrueSigil: 
+  Enabled: false
+Sorbet/StrongSigil:
+  Enabled: true
+Sorbet/StrictSigil:
+  Enabled: false
+
+# Exclude files not part of the gem source, and the /bin files
+# which need to start with the ruby shebang
+Sorbet:
+  Exclude:
+    - 'bin/**/*'
+    - 'spec/**/*'
+    - '*.gemspec'
+    - 'Rakefile'
+    - 'Gemfile'
+

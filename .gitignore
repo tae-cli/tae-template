@@ -1,0 +1,16 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+*.swp
+
+# rspec failure tracking
+.rspec_status
+
+# Gemfile.lock shouldn't be checked in for gems
+Gemfile.lock
+
